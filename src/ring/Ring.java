@@ -12,24 +12,28 @@ public class Ring {
 
     private static DecimalFormat df2 = new DecimalFormat(".##");
 
-    public Ring(){
-        this(1, 1, 1, "valge");
+    public Ring() {
+        this(0, 0, 0, "värvitu");
 
     }
-    public Ring(int keskpunkt_y, int keskpunkt_x, int raadius, String toon){
+
+    public Ring(int keskpunkt_x, int keskpunkt_y, int raadius, String toon) {
         this.keskpunkt_x = keskpunkt_x;
         this.keskpunkt_y = keskpunkt_y;
         this.raadius = raadius;
         this.toon = toon;
     }
 
-
-    public void toonitaRing() {
-
+    public Ring(int raadius) {
+        this(0, 0, raadius, "värvitu");
     }
 
-    public void toonigaRing(int keskpunkt_x, int keskpunkt_y, int raadius, String toon) {
+    public Ring(int keskpunkt_x, int keskpunkt_y) {
+        this(keskpunkt_x, keskpunkt_y, 1, "värvitu");
+    }
 
+    public Ring(String toon) {
+        this(0, 0, 1, toon);
     }
 
     public void ymbermoot(int raadius) {
@@ -42,11 +46,10 @@ public class Ring {
         System.out.println("Pindala: " + S);
     }
 
-    private String toString(double c) {
-        return toString(c);
-    }
+    //private String toString() { }
 
-    //----------------------
+    // TODO Comparing method
+
     public int getRaadius() {
         return raadius;
     }

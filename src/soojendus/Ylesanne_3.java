@@ -1,3 +1,5 @@
+package soojendus;
+
 import java.util.Scanner;
 
 public class Ylesanne_3 {

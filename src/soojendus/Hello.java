@@ -1,3 +1,5 @@
+package soojendus;
+
 public class Hello {
     public static void main(String [] args){
 

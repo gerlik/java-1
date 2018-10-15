@@ -1,4 +1,4 @@
-import java.lang.reflect.Array;
+package soojendus;
 
 /* Ülesanne 1 */
 public class Ylesanne_1 {

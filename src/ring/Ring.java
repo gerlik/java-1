@@ -1,7 +1,5 @@
 package ring;
 
-import java.text.DecimalFormat;
-
 import static java.lang.Math.*;
 
 public class Ring {
@@ -10,11 +8,9 @@ public class Ring {
     private int raadius;
     private String toon;
 
-    private static DecimalFormat df2 = new DecimalFormat(".##");
-
+    // Defaults
     public Ring() {
         this(0, 0, 0, "värvitu");
-
     }
 
     public Ring(int keskpunkt_x, int keskpunkt_y, int raadius, String toon) {
@@ -24,31 +20,45 @@ public class Ring {
         this.toon = toon;
     }
 
+    // Set your own radius for colorless circle
     public Ring(int raadius) {
+
         this(0, 0, raadius, "värvitu");
     }
 
+    // Set your own radius and location for colorless circle
     public Ring(int keskpunkt_x, int keskpunkt_y) {
+
         this(keskpunkt_x, keskpunkt_y, 1, "värvitu");
     }
 
-    public Ring(String toon) {
-        this(0, 0, 1, toon);
-    }
-
+    // Circumference
     public void ymbermoot(int raadius) {
-        double moot = 2 * raadius * PI;
-        System.out.println("Ümbermõõt: " + moot);
+        double circumference = 2 * raadius * PI;
+        System.out.println("Ümbermõõt: " + circumference);
     }
 
-    public void pindala(int raadius) {
-        double S = PI * raadius * raadius;
-        System.out.println("Pindala: " + S);
+    // Area
+    public static void pindala(int raadius) {
+        double area = PI * raadius * raadius;
+        System.out.println("Pindala: " + area);
     }
 
-    //private String toString() { }
+    @Override
+    public String toString() {
+        String result = "Asukoht: " + getKeskpunkt_x() + " x " + getKeskpunkt_y() + "\n" +
+                "Raadius: " + getRaadius() + "\n" +
+                "Värv: " + getToon() + "\n";
+        return result;
+    }
 
-    // TODO Comparing method
+    public static int calculateRadiusSum(int raadius1, int raadius2) {
+        return raadius1 + raadius2;
+    }
+
+    public static double calculateDistance(int x1, int y1, int x2, int y2) {
+        return Math.sqrt((y2 - y1) * (y2 - y1) + (x2 - x1) * (x2 - x1));
+    }
 
     public int getRaadius() {
         return raadius;

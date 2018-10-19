@@ -43,9 +43,6 @@ public class Kolmnurk {
     @Override
     public String toString() {
         String result = "Kolmnurk: " + "\n" +
-                "Esimene punkt: " + "\n" +
-                "Teine punkt: " + "\n" +
-                "Kolmas punkt: " + "\n" +
                 "Esimene sirge: " + sirge1.getSirgepikkus() + "\n" +
                 "Teine sirge: " + sirge2.getSirgepikkus() + "\n" +
                 "Kolmas sirge: " + sirge3.getSirgepikkus() + "\n" +

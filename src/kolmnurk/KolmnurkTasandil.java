@@ -16,16 +16,20 @@ public class KolmnurkTasandil {
         //System.out.println(kolmas);
 
         Sirge sirge1 = new Sirge(esimene, teine);
-        System.out.println(sirge1);
+        //ystem.out.println(sirge1);
 
         Sirge sirge2 = new Sirge(esimene, kolmas);
-        System.out.println(sirge2);
+        //System.out.println(sirge2);
 
         Sirge sirge3 = new Sirge(teine, kolmas);
-        System.out.println(sirge3);
+        //System.out.println(sirge3);
 
         Kolmnurk kolmnurk1 = new Kolmnurk(esimene, teine, kolmas);
         System.out.println(kolmnurk1);
+        System.out.println();
+        Kolmnurk kolmnurk2 = new Kolmnurk(sirge1, sirge2, sirge3);
+        System.out.println(kolmnurk2);
+
 
     }
 

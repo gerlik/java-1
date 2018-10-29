@@ -4,7 +4,7 @@ Java homework
 ## Kolmnurk
 Tasks with triangles.
 
-##Practice
+## Practice
 Practicing the basics.
 
 ## Ring 

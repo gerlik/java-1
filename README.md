@@ -2,7 +2,10 @@
 Java homework
 
 ## Kolmnurk
-Triangles.
+Tasks with triangles.
+
+##Practice
+Practicing the basics.
 
 ## Ring 
 Using constructors to do different tasks with circles.

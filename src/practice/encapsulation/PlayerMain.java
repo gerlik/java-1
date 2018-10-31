@@ -1,7 +1,5 @@
 package practice.encapsulation;
 
-import practice.encapsulation.EnhancedPlayer;
-
 public class PlayerMain {
 
     public static void main(String[] args) {

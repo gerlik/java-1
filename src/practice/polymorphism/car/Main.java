@@ -21,21 +21,77 @@ class Car {
         return name;
     }
 
-    public void startEngine() {
-
+    public String startEngine() {
+        return "Car -> startEngine()";
     }
 
-    public void accelerate() {
-
+    public String accelerate() {
+        return "Car -> accelerate()";
     }
 
-    public void brake() {
+    public String brake() {
+        return "Car -> brake()";
+    }
+}
 
+class Audi extends Car {
+    public Audi(int cylinders, String name) {
+        super(cylinders, name);
+    }
+
+    @Override
+    public String startEngine() {
+        return getClass().getSimpleName() + " -> startEngine()";
+    }
+
+    @Override
+    public String accelerate() {
+        return "Audi -> accelerate()";
+    }
+
+    @Override
+    public String brake() {
+        return "Audi -> brake()";
+    }
+}
+
+class Toyota extends Car {
+    public Toyota(int cylinders, String name) {
+        super(cylinders, name);
+    }
+
+    @Override
+    public String startEngine() {
+        return "Toyota -> startEngine()";
+    }
+
+    @Override
+    public String accelerate() {
+        return "Toyota -> accelerate()";
+    }
+
+    @Override
+    public String brake() {
+        return "Toyota -> brake()";
     }
 }
 
 public class Main {
     public static void main(String[] args) {
+        Car car = new Car(8, "Base car");
+        System.out.println(car.startEngine());
+        System.out.println(car.accelerate());
+        System.out.println(car.brake());
+
+        Audi audi = new Audi(6, "ABC");
+        System.out.println(audi.startEngine());
+        System.out.println(audi.accelerate());
+        System.out.println(audi.brake());
+
+        Toyota toyota = new Toyota(6, "Land Cruiser");
+        System.out.println(toyota.startEngine());
+        System.out.println(toyota.accelerate());
+        System.out.println(toyota.brake());
 
     }
 }

@@ -1,4 +1,4 @@
-package practice.polymorphism;
+package practice.polymorphism.movies;
 
 class Movie {
     private String name;
@@ -58,8 +58,8 @@ public class Main {
     public static void main(String[] args) {
         for (int i = 1; i < 10; i++) {
             Movie movie = randomMovie();
-            System.out.println("Movie: " + i + " " + movie.getName() + "\n" +
-                    "Plot: " + movie.plot());
+            System.out.println("Movie #" + i + " " + movie.getName() + "\n" +
+                    "Plot: " + movie.plot() + "\n");
         }
     }
 

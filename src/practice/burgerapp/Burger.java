@@ -46,6 +46,7 @@ public class Burger {
         this.addition4Price = price;
     }
 
+    // Too much repetition
     public double assemble() {
         double totalPrice = this.price;
         System.out.println("Hamburger: " + this.name + "\n"

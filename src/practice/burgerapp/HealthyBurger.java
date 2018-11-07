@@ -20,4 +20,21 @@ public class HealthyBurger extends Burger {
         this.healthyExtra2Name = name;
         this.healthyExtra2Price = price;
     }
+
+    @Override
+    public double assemble() {
+        double totalPrice = super.assemble();
+
+        if (this.healthyExtra1Name != null) {
+            totalPrice += this.healthyExtra1Price;
+            System.out.println("Added healthy " + this.healthyExtra1Name + " for " + this.healthyExtra1Price);
+        }
+
+        if (this.healthyExtra2Name != null) {
+            totalPrice += this.healthyExtra1Price;
+            System.out.println("Added healthy " + this.healthyExtra2Name + " for " + this.healthyExtra2Price);
+        }
+
+        return totalPrice;
+    }
 }

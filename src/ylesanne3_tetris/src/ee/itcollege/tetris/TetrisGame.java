@@ -1,5 +1,6 @@
 package ylesanne3_tetris.src.ee.itcollege.tetris;
 
+import javafx.scene.input.KeyCode;
 import ylesanne3_tetris.src.ee.itcollege.tetris.lib.FigureGenerator;
 import ylesanne3_tetris.src.ee.itcollege.tetris.parts.Block;
 import ylesanne3_tetris.src.ee.itcollege.tetris.parts.Figure;
@@ -8,6 +9,8 @@ import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+
+import javax.swing.plaf.basic.BasicSplitPaneUI;
 
 /* Base code from https://github.com/murjam/tetris-fx */
 
@@ -33,6 +36,13 @@ public class TetrisGame extends Application {
                 Block.SIZE * FIELD_HEIGHT);
 
         scene.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
+            if (event.getCode() == KeyCode.RIGHT) {
+                figure.move(1, 1);
+            } else if (event.getCode() == KeyCode.LEFT) {
+                figure.move(-1, 1);
+            } else {
+                figure.move(0, 0);
+            }
             System.out.println(event.getCode());
         });
 
@@ -40,5 +50,6 @@ public class TetrisGame extends Application {
         window.setScene(scene);
         window.show();
     }
+
 
 }

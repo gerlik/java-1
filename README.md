@@ -1,14 +1,14 @@
 # java-1
-Java homework
+Java homework, relearning and practice.
 
-## Kolmnurk
-Tasks with triangles.
-
-## Practice
+### Practice
 Practicing the basics.
 
-## Ring 
-Using constructors to do different tasks with circles.
+### Ring; Kolmnurk 
+Using constructors to do different tasks with circles/triangles.
 
-## Soojendus
+### Soojendus
 Warmup, easy tasks with loops and variables.
+
+### Tetris
+Tetris game using JavaFX

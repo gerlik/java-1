@@ -14,6 +14,19 @@ public class Figure extends ArrayList<Block> {
 
     }
 
+//        new Block(2,2);
+//        new Block(1,2);
+//        new Block(2,1);
+//        new Block(2,3);
+
+    public void rotate() {
+        for (Block block : this) {
+            block.setX(block.getY() + 45 - 40);
+            block.setY(45 + 40 - block.getX() - Block.SIZE);
+            System.out.println(block.getX() + "; " + block.getY());
+        }
+    }
+
 }
 
 
